@@ -104,13 +104,6 @@ flossum/
 4. Test it in `examples/`
 5. Open a PR ❤️
 
-Good first issues:
-
-* Add `CONTRIBUTING.md`
-* Implement `bounce()` animation
-* Add `asciiArt()` (styled figlet text)
-* Improve CLI support with `--style`
-
 ---
 
 ## 🧾 License
