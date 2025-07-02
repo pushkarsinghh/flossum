@@ -1,3 +1,11 @@
-export { wave } from './lib/wave.js';
-export { typeOut } from './lib/type.js';
-export { colorPulse } from './lib/pulse.js';
+import { typeOut } from './lib/simple/type.js';
+import { wave } from './lib/effects/wave.js';
+import { colorPulse } from './lib/simple/pulse.js';
+import { playFrames } from './lib/core/framePlayer.js';
+import { glitch } from './lib/effects/glitch.js';
+import { scramble } from './lib/effects/scramble.js';
+import { spinner } from './lib/simple/spinner.js';
+
+export const simple = { typeOut, colorPulse, spinner };
+export const effects = { wave, glitch, scramble };
+export const core = { playFrames };

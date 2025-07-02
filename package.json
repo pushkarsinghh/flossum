@@ -1,5 +1,5 @@
 {
-  "name": "bloom",
+  "name": "flossum",
   "version": "1.0.0",
   "description": "CSS animations for the terminal.",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pushkarsinghh/bloom.git"
+    "url": "git+https://github.com/pushkarsinghh/flossum.git"
   },
   "author": "Pushkar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pushkarsinghh/bloom/issues"
+    "url": "https://github.com/pushkarsinghh/flossum/issues"
   },
-  "homepage": "https://github.com/pushkarsinghh/bloom#readme",
+  "homepage": "https://github.com/pushkarsinghh/flossum#readme",
   "dependencies": {
     "chalk": "^5.4.1"
   }
