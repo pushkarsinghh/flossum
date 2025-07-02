@@ -15,11 +15,12 @@ const frames = [
 ];
 
 (async () => {
-  await simple.typeOut("Hello from Flossum!", 75);
-  await effects.wave("Pushkar is coding 🛠️", { duration: 1500 });
-  await simple.colorPulse("🎨 Rainbow vibes incoming...");
-  await core.playFrames(frames, { delay: 120, repeat: 2 });
-  await effects.glitch("This might break your terminal...");
-  await effects.scramble("Decoding secrets...", { duration: 1000 });
-  await simple.spinner("Loading...", 2000);
+  await simple.typeOut("🚀 Welcome to the Flossum Demo!", 60);
+  await effects.wave("✨ Watch the magic unfold...", { duration: 1800 });
+  await simple.colorPulse("🌈 Feel the rainbow energy!");
+  await core.playFrames(frames, { delay: 90, repeat: 3 });
+  await effects.glitch("⚡ Glitching the matrix...");
+  await effects.scramble("🔍 Unraveling mysteries...", { duration: 1200 });
+  await simple.spinner("⏳ Please wait while we prepare awesomeness...", 2500);
+  await simple.typeOut("🎉 All done! Enjoy coding!", 50);
 })();
