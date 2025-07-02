@@ -4,6 +4,9 @@
   "description": "CSS animations for the terminal.",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "flossum": "./bin/flossum.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
