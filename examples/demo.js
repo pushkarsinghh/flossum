@@ -1,4 +1,4 @@
-import { wave } from '../index.js';
+import { wave, typeOut } from '../index.js';
 
 (async () => {
   await wave("Pushkar is coding 🛠️", { duration: 4000 });
