@@ -1,9 +1,5 @@
 # 🌸 Flossum
 
-<p align="center">
-    <img src="public/FlossumLogo.png" alt="Flossum Logo" width="96" height="96" style="border-radius: 16px;">
-</p>
-
 > 🎬 Beautiful and minimal terminal animations for your CLI projects, scripts, and creative coding. Bring your text to life with expressive effects.
 
 ---
