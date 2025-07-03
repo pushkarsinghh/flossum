@@ -11,5 +11,3 @@ import { progressBar } from './lib/simple/progressBar.js';
 
 export const flossum = { typeOut, playFrames, spinner, reverseType, progressBar, 
   colorPulse, wave, glitch, scramble, rainbow };
-// export const effects = { wave, glitch, scramble, rainbow };
-// export const core = { playFrames };
