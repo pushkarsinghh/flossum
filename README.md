@@ -42,7 +42,7 @@ await effects.wave("Wavy Text");
 await effects.glitch("Glitchy Output");
 await effects.scramble("Scrambled Message");
 await simple.spinner("Loading...");
-await effects.asciiArt("ASCII!", { font: "block", colors: ["cyan", "magenta"] });
+await console.log(effects.asciiArt("ASCII!", { font: "block", colors: ["cyan", "magenta"] }));
 
 const frames = ["[=   ]", "[==  ]", "[=== ]", "[====]", "[=== ]", "[==  ]", "[=   ]"];
 await core.playFrames(frames, { delay: 100, repeat: 2 });
@@ -72,7 +72,7 @@ flossum --help
 
 ```bash
 node examples/demo.js
-node examples/asciiArt.js
+node examples/asciiArtDemo.js
 ```
 
 This file runs a showcase of all available animations. Perfect for testing or showing off!
