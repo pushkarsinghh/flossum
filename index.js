@@ -9,6 +9,7 @@ import { rainbow } from './lib/effects/rainbow.js';
 import { reverseType } from './lib/simple/reverseType.js';
 import { progressBar } from './lib/simple/progressBar.js';
 
-export const simple = { typeOut, colorPulse, spinner, reverseType, progressBar };
-export const effects = { wave, glitch, scramble, rainbow };
-export const core = { playFrames };
+export const flossum = { typeOut, playFrames, spinner, reverseType, progressBar, 
+  colorPulse, wave, glitch, scramble, rainbow };
+// export const effects = { wave, glitch, scramble, rainbow };
+// export const core = { playFrames };
