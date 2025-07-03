@@ -126,7 +126,9 @@ Good first issues:
 
 ## 📝 License
 
-MIT © [Pushkar Singh](https://github.com/pushkarsingh)
+## License
+
+This project is licensed under the [MIT License](./LICENSE) © 2025 Pushkar Singh.
 
 ---
 

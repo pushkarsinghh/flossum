@@ -1,0 +1,5 @@
+NOTICE
+
+This software is © 2025 Pushkar Singh and licensed under the MIT License.
+
+If you use this project or a modified version in any publicly deployed product or published work, you must credit the original author and link to the original repository.
