@@ -20,6 +20,9 @@ const frames = [
   await simple.colorPulse("🌈 Feel the rainbow energy!");
   await core.playFrames(frames, { delay: 90, repeat: 3 });
   await effects.glitch("⚡ Glitching the matrix...");
+  await effects.rainbow("🌈 Taste the rainbow!", { duration: 1500 });
+  await simple.reverseType("Bye bye Bloom!", 60);
+  await simple.progressBar({ width: 20, duration: 1500 });
   await effects.scramble("🔍 Unraveling mysteries...", { duration: 1200 });
   await simple.spinner("⏳ Please wait while we prepare awesomeness...", 2500);
   await simple.typeOut("🎉 All done! Enjoy coding!", 50);
