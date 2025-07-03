@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { simple, effects } from '../index.js';
+import { flossum } from '../index.js';
 
 const args = process.argv.slice(2);
 const command = args[0];
@@ -10,34 +10,34 @@ const text = args.slice(1).join(' ');
   switch (command) {
     case 'type':
     case 'typeOut':
-      await simple.typeOut(text);
+      await flossum.typeOut(text);
       break;
     case 'wave':
-      await effects.wave(text);
+      await flossum.wave(text);
       break;
     case 'glitch':
-      await effects.glitch(text);
+      await flossum.glitch(text);
       break;
     case 'scramble':
-      await effects.scramble(text);
+      await flossum.scramble(text);
       break;
     case 'spinner':
-      await simple.spinner(text);
+      await flossum.spinner(text);
       break;
     case 'pulse':
     case 'colorPulse':
-      await simple.colorPulse(text);
+      await flossum.colorPulse(text);
       break;
     case 'rainbow':
-      await effects.rainbow(text);
+      await flossum.rainbow(text);
       break;
     case 'reverse':
     case 'reverseType':
-      await simple.reverseType(text);
+      await flossum.reverseType(text);
       break;
     case 'progress':
     case 'progressBar':
-      await simple.progressBar();
+      await flossum.progressBar();
       break;
     case '--help':
     default:
