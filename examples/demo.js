@@ -1,4 +1,4 @@
-import { flossum } from '../index.js';
+import flossum from 'flossum';
 
 const frames = [
   '[     ]',

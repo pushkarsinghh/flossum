@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { flossum } from '../index.js';
+import flossum from 'flossum';
 
 const args = process.argv.slice(2);
 const command = args[0];
