@@ -27,7 +27,6 @@ Or for CLI usage:
 
 ```bash
 npm install -g flossum
-flossum asciiArt "ASCII!" --font block --colors cyan,magenta
 ```
 
 ---
@@ -35,17 +34,17 @@ flossum asciiArt "ASCII!" --font block --colors cyan,magenta
 ## 🧪 Usage (API)
 
 ```js
-import { simple, effects, core } from 'flossum';
+import flossum from 'flossum';
 
-await simple.typeOut("Hello!");
-await effects.wave("Wavy Text");
-await effects.glitch("Glitchy Output");
-await effects.scramble("Scrambled Message");
-await simple.spinner("Loading...");
-await console.log(effects.asciiArt("ASCII!", { font: "block", colors: ["cyan", "magenta"] }));
+await flossum.typeOut("Hello!");
+await flossum.wave("Wavy Text");
+await flossum.glitch("Glitchy Output");
+await flossum.scramble("Scrambled Message");
+await flossum.spinner("Loading...");
+await flossum.log(effects.asciiArt("ASCII!", { font: "block", colors: ["cyan", "magenta"] }));
 
 const frames = ["[=   ]", "[==  ]", "[=== ]", "[====]", "[=== ]", "[==  ]", "[=   ]"];
-await core.playFrames(frames, { delay: 100, repeat: 2 });
+await flossum.playFrames(frames, { delay: 100, repeat: 2 });
 ```
 
 ---
@@ -53,11 +52,16 @@ await core.playFrames(frames, { delay: 100, repeat: 2 });
 ## ⚙️ CLI Usage
 
 ```bash
-flossum typeOut "Hello World"
-flossum wave "Bloom from the Terminal!"
-flossum glitch "System Hack"
-flossum scramble "Decrypting..."
-flossum spinner "Loading..."
+flossum typeOut "Hello World" 60
+flossum reverseType "Backwards magic" 60
+flossum wave "Wavy Text" --amplitude 3
+flossum colorPulse "Pulse!" --colors red,green,blue --duration 1000
+flossum glitch "Glitch!" --intensity 4
+flossum scramble "Secret..." --delay 50
+flossum rainbow "🌈" --duration 2000
+flossum spinner "Please wait..."
+flossum progressBar --width 40 --total 100
+flossum playFrames --frames "[= ]" "[==]" "[===]" --delay 100 --repeat 2
 ```
 
 ```bash
