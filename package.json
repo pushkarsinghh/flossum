@@ -14,6 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/pushkarsinghh/flossum.git"
   },
+  "types": "index.d.ts",
   "author": "Pushkar",
   "license": "ISC",
   "bugs": {
