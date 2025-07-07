@@ -1,36 +1,29 @@
-# 🌸 Flossum — Terminal Text Animations Made Beautiful
+# 🌸 Flossum
 
-> 🎬 Bring your terminal to life with smooth text animations, creative effects, and expressive CLI interactions — all powered by a single elegant library.
-
----
-
-## 🚀 What is Flossum?
-
-**Flossum** is an open-source Node.js library and CLI tool for beautiful and expressive terminal animations. Whether you’re building command-line tools, scripts, or just want to add flair to your output, Flossum lets your terminal bloom. 🌸
+> 🎬 Beautiful and minimal terminal animations for your CLI projects, scripts, and creative coding. Bring your text to life with expressive effects.
 
 ---
 
 ## ✨ Features
 
-* 📜 Typewriter effect
-* 🌊 Wave text animation
-* 🌈 Rainbow and color pulse effects
-* 🎛️ Frame-based animation player
-* 🌀 Glitch and scramble effects
-* 🔁 Spinners and progress bars
-* 🔄 Reverse type-out effect
+* ⌨️ Typewriter effect (`typeOut`)
+* 🌊 Wavy text animation (`wave`)
+* 🌈 Color pulsing effect (`colorPulse`)
+* 🔁 Spinner animation (`spinner`)
+* 🤯 Glitch text effect (`glitch`)
+* 🧩 Scramble decoder effect (`scramble`)
+* 🎞 Frame-based ASCII animation player (`playFrames`)
+* 🅰️ ASCII art text rendering (`asciiArt`)
 
 ---
 
 ## 📦 Installation
 
-Install via npm:
-
 ```bash
 npm install flossum
 ```
 
-Or install globally for CLI usage:
+Or for CLI usage:
 
 ```bash
 npm install -g flossum
@@ -38,41 +31,55 @@ npm install -g flossum
 
 ---
 
-## 🔧 Usage (Programmatic API)
+## 🧪 Usage (API)
 
 ```js
-import { flossum } from 'flossum';
+import flossum from 'flossum';
 
-await flossum.typeOut("Hello World", 60);
-await flossum.wave("Wavy text animation");
-await flossum.colorPulse("Color pulse!");
-await flossum.playFrames(["[=   ]", "[==  ]", "[=== ]"], { delay: 100 });
-await flossum.glitch("System Glitch...");
-await flossum.rainbow("🌈 Taste the rainbow!");
-await flossum.reverseType("Reversing...");
-await flossum.progressBar({ width: 30 });
-await flossum.scramble("Decoding...");
+await flossum.typeOut("Hello!");
+await flossum.wave("Wavy Text");
+await flossum.glitch("Glitchy Output");
+await flossum.scramble("Scrambled Message");
 await flossum.spinner("Loading...");
+await flossum.log(effects.asciiArt("ASCII!", { font: "block", colors: ["cyan", "magenta"] }));
+
+const frames = ["[=   ]", "[==  ]", "[=== ]", "[====]", "[=== ]", "[==  ]", "[=   ]"];
+await flossum.playFrames(frames, { delay: 100, repeat: 2 });
 ```
 
 ---
 
-## 💻 CLI Usage
+## ⚙️ CLI Usage
 
 ```bash
-flossum typeOut "Hello World"
-flossum wave "Bloom from the Terminal!"
-flossum glitch "⚡ Glitch Mode"
-flossum scramble "🔍 Decoding..."
-flossum spinner "⏳ Please wait..."
-flossum pulse "🎨 Color pulse!"
-flossum rainbow "🌈 Taste the rainbow!"
-flossum reverse "Backwards magic"
-flossum progress
+flossum typeOut "Hello World" 60
+flossum reverseType "Backwards magic" 60
+flossum wave "Wavy Text" --amplitude 3
+flossum colorPulse "Pulse!" --colors red,green,blue --duration 1000
+flossum glitch "Glitch!" --intensity 4
+flossum scramble "Secret..." --delay 50
+flossum rainbow "🌈" --duration 2000
+flossum spinner "Please wait..."
+flossum progressBar --width 40 --total 100
+flossum playFrames --frames "[= ]" "[==]" "[===]" --delay 100 --repeat 2
+```
 
-# For help:
+```bash
 flossum --help
 ```
+
+> Lists all available animations and usage instructions.
+
+---
+
+## 🎬 Demo
+
+```bash
+node examples/demo.js
+node examples/asciiArtDemo.js
+```
+
+This file runs a showcase of all available animations. Perfect for testing or showing off!
 
 ---
 
@@ -81,67 +88,36 @@ flossum --help
 ```
 flossum/
 ├── lib/
-│   ├── core/         # Utilities and frame player
-│   ├── simple/       # Basic one-line animations
-│   └── effects/      # Advanced effects (glitch, wave, etc.)
-├── bin/              # CLI entry point
-├── examples/         # Demos and test scripts
-├── index.js          # Public API
+│   ├── core/       # Utilities and frame player
+│   ├── simple/     # Basic animations
+│   └── effects/    # Text effects (wave, glitch, etc.)
+├── examples/       # Example usage scripts
+├── bin/            # CLI entrypoint
+├── index.js        # Export API
 ├── package.json
 └── README.md
 ```
 
 ---
 
-## 🧪 Try the Demo
-
-```bash
-node examples/demo.js
-```
-
-> See all animations in action, beautifully rendered in sequence!
-
----
-
 ## 🧑‍💻 Contributing
 
-We'd love your help growing Flossum! New animations, bug fixes, CLI features, docs — all contributions welcome.
-
-Good first issues:
-
-* Add a `bounce()` effect
-* Add `asciiArt()` using figlet
-* Create config support for CLI (`.flossumrc`)
-* Improve CLI error handling / customization
-
-### Steps to Contribute
-
 1. Fork the repo
-2. Create a feature branch
-3. Add your animation or improvement
-4. Run tests using `node examples/demo.js`
-5. Open a PR ✨
+2. Create a new branch: `git checkout -b feature/new-animation`
+3. Add your effect in the correct folder (simple/effects/core)
+4. Test it in `examples/`
+5. Open a PR ❤️
 
 ---
 
-## 📝 License
+## 🧾 License
 
-## License
-
-This project is licensed under the [MIT License](./LICENSE) © 2025 Pushkar Singh.
+MIT © Pushkar Singh
 
 ---
 
-## 🔗 Links
+## 🌐 Links
 
-* 🔸 GitHub: [github.com/pushkarsingh/flossum](https://github.com/pushkarsingh/flossum)
-* 🔸 NPM: [npmjs.com/package/flossum](https://www.npmjs.com/package/flossum)
-* 🌐 Website: Coming soon!
-
----
-
-## 🌺 Let your terminal bloom.
-
-```
-🌸 flossum — CLI animations that feel alive
-```
+* GitHub: [github.com/pushkarsingh/flossum](https://github.com/pushkarsingh/flossum)
+* NPM: [npmjs.com/package/flossum](https://www.npmjs.com/package/flossum)
+* Website: Coming soon ✨
