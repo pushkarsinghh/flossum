@@ -124,6 +124,8 @@ Good first issues:
 
 ---
 
+For detailed guidelines, see our [CONTRIBUTING.md](./CONTRIBUTING.md).
+
 ## 📝 License
 
 ## License
