@@ -100,13 +100,6 @@ flossum/
 
 ---
 
-docs/add-contributing-guide
-For detailed guidelines, see our [CONTRIBUTING.md](./CONTRIBUTING.md).
-
-## 📝 License
-
-## License
-=======
 ## 🧑‍💻 Contributing
 
 1. Fork the repo
