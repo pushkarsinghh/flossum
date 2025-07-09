@@ -14,6 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/pushkarsinghh/flossum.git"
   },
+  "types": "index.d.ts",
   "author": "Pushkar",
   "license": "ISC",
   "bugs": {
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/pushkarsinghh/flossum#readme",
   "dependencies": {
-    "chalk": "^5.4.1"
+    "cfonts": "^3.3.0",
+    "chalk": "^5.4.1",
+    "flossum": "^1.0.5"
   }
 }
