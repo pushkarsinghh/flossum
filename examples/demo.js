@@ -1,4 +1,4 @@
-import flossum from 'flossum';
+import flossum from '../index.js';
 
 const frames = [
   '[     ]',
@@ -15,6 +15,7 @@ const frames = [
 ];
 
 (async () => {
+  console.log(await flossum.asciiArt("Hello!", { duration: 2000 }));
   await flossum.typeOut("🚀 Welcome to the Flossum Demo!", 60);
   await flossum.wave("✨ Watch the magic unfold...", { duration: 1800 });
   await flossum.colorPulse("🌈 Feel the rainbow energy!");
