@@ -40,6 +40,7 @@ const text = args.slice(1).join(' ');
       await flossum.progressBar();
       break;
     case '--help':
+    case '-h':
     default:
       console.log(`
 🌸 Flossum CLI — Terminal Animations
@@ -55,8 +56,21 @@ Usage:
   flossum reverse "Goodbye!"
   flossum progress
 
+Available Animations:
+  typeOut (alias: type)
+  wave
+  glitch
+  scramble
+  spinner
+  pulse (alias: colorPulse)
+  rainbow
+  reverse (alias: reverseType)
+  progress (alias: progressBar)
+
 Options:
-  --help        Show this help message
+  --help, -h    Show this help message
+
+GitHub: https://github.com/pushkarsinghh/flossum
 `);
   }
 })();
