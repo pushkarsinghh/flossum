@@ -1,4 +1,3 @@
-
 import { typeOut } from './lib/simple/type.js';
 import { wave } from './lib/effects/wave.js';
 import { reverseType } from './lib/simple/reverseType.js';

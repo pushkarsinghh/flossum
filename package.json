@@ -1,6 +1,6 @@
 {
   "name": "flossum",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "TextFX for the terminal.",
   "main": "index.js",
   "type": "module",
@@ -8,7 +8,8 @@
     "flossum": "./bin/flossum.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": "node ./examples/demo.js"
   },
   "repository": {
     "type": "git",

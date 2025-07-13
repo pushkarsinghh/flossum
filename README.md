@@ -2,20 +2,18 @@
 
 > 🎬 Beautiful and minimal terminal animations for your CLI projects, scripts, and creative coding. Bring your text to life with expressive effects.
 
----
-
 ## ✨ Features
-
 * ⌨️ Typewriter effect (`typeOut`)
+* ⏪ Reverse typewriter effect (`reverseType`)
 * 🌊 Wavy text animation (`wave`)
 * 🌈 Color pulsing effect (`colorPulse`)
 * 🔁 Spinner animation (`spinner`)
+* 📊 Progress bar animation (`progressBar`)
 * 🤯 Glitch text effect (`glitch`)
 * 🧩 Scramble decoder effect (`scramble`)
+* 🌈 Rainbow text animation (`rainbow`)
 * 🎞 Frame-based ASCII animation player (`playFrames`)
 * 🅰️ ASCII art text rendering (`asciiArt`)
-
----
 
 ## 📦 Installation
 
@@ -29,39 +27,33 @@ Or for CLI usage:
 npm install -g flossum
 ```
 
----
-
 ## 🧪 Usage (API)
 
 ```js
 import flossum from 'flossum';
 
-await flossum.typeOut("Hello!");
-await flossum.wave("Wavy Text");
-await flossum.glitch("Glitchy Output");
-await flossum.scramble("Scrambled Message");
-await flossum.spinner("Loading...");
-await flossum.log(effects.asciiArt("ASCII!", { font: "block", colors: ["cyan", "magenta"] }));
-
-const frames = ["[=   ]", "[==  ]", "[=== ]", "[====]", "[=== ]", "[==  ]", "[=   ]"];
-await flossum.playFrames(frames, { delay: 100, repeat: 2 });
+await flossum.typeOut("🚀 Welcome to Flossum!", 60);
+await flossum.wave("✨ Watch the magic unfold...", { duration: 1800 });
+await flossum.progressBar({ width: 20, duration: 1500 });
+await flossum.colorPulse("🌈 Feel the rainbow energy!");
+await flossum.playFrames([
+  '[     ]', '[=    ]', '[==   ]', '[===  ]', '[==== ]', '[=====]', '[ ====]', '[  ===]', '[   ==]', '[    =]', '[     ]',
+], { interval: 3000, delay: 90, repeat: 3});
 ```
 
----
 
 ## ⚙️ CLI Usage
 
 ```bash
-flossum typeOut "Hello World" 60
-flossum reverseType "Backwards magic" 60
-flossum wave "Wavy Text" --amplitude 3
-flossum colorPulse "Pulse!" --colors red,green,blue --duration 1000
-flossum glitch "Glitch!" --intensity 4
-flossum scramble "Secret..." --delay 50
-flossum rainbow "🌈" --duration 2000
+flossum typeOut "Hello World"
+flossum reverseType "Backwards magic"
+flossum wave "Wavy Text"
+flossum colorPulse "Pulse!"
+flossum glitch "Glitch!"
+flossum scramble "Secret..."
+flossum rainbow "🌈"
 flossum spinner "Please wait..."
-flossum progressBar --width 40 --total 100
-flossum playFrames --frames "[= ]" "[==]" "[===]" --delay 100 --repeat 2
+flossum progressBar
 ```
 
 ```bash
@@ -70,18 +62,18 @@ flossum --help
 
 > Lists all available animations and usage instructions.
 
----
-
 ## 🎬 Demo
 
 ```bash
 node examples/demo.js
-node examples/asciiArtDemo.js
+```
+or
+```bash
+npm run demo
 ```
 
-This file runs a showcase of all available animations. Perfect for testing or showing off!
+This will run a showcase of all available animations. Perfect for testing purposes!
 
----
 
 ## 📁 Project Structure
 
@@ -98,7 +90,6 @@ flossum/
 └── README.md
 ```
 
----
 
 ## 🧑‍💻 Contributing
 
@@ -108,13 +99,12 @@ flossum/
 4. Test it in `examples/`
 5. Open a PR ❤️
 
----
-
 ## 🧾 License
 
-MIT © Pushkar Singh
+MIT © [Pushkar Singh](https://github.com/pushkarsingh/flossum)
 
----
+See [LICENSE](./LICENSE) for details.
+
 
 ## 🌐 Links
 
