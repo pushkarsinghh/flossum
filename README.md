@@ -122,3 +122,15 @@ See [LICENSE](./LICENSE) for details.
 - ✅ `examples/flash-demo.js` added
 - ✅ Exported via `index.js`
 - ✅ Documented in `README.md`
+
+
+### `typeDelete(text, options)`
+Types text letter-by-letter and deletes it in reverse.
+
+**Options:**
+- `delay`: typing speed
+- `deleteDelay`: deleting speed
+- `pause`: wait before deleting
+- `repeat`: repeat the cycle
+
+
