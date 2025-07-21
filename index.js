@@ -9,20 +9,21 @@ import { rainbow } from './lib/effects/rainbow.js';
 import { scramble } from './lib/effects/scramble.js';
 import { spinner } from './lib/simple/spinner.js';
 import { asciiArt } from './lib/effects/asciiArt.js';
-
+import { flash } from './lib/simple/flash.js';   //  ->  flash added
 const flossum = {
-   typeOut,
-   spinner,
-   reverseType,
-   progressBar,
-   wave,
-   glitch,
-   scramble,
-   rainbow,
-   colorPulse,
-   playFrames,
-   asciiArt
- };
+  typeOut,
+  spinner,
+  reverseType,
+  progressBar,
+  wave,
+  glitch,
+  scramble,
+  rainbow,
+  colorPulse,
+  playFrames,
+  asciiArt,
+  flash  // --> added hero
+};
 
- export { flossum };
- export default flossum;
+export { flossum };
+export default flossum;
