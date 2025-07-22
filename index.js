@@ -24,10 +24,8 @@ const flossum = {
   playFrames,
   asciiArt,
   flash, 
-  typeDelete  // --> added hero
+  typeDelete
 };
 
 export { flossum };
 export default flossum;
-export {flash};
-export{typeDelete};

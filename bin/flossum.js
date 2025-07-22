@@ -39,6 +39,12 @@ const text = args.slice(1).join(' ');
     case 'progressBar':
       await flossum.progressBar();
       break;
+    case 'flash':
+      await flossum.flash(text);
+      break;
+    case 'typeDelete':
+      await flossum.typeDelete(text);
+      break;
     case '--help':
     case '-h':
     default:
@@ -55,6 +61,9 @@ Usage:
   flossum rainbow "Taste the rainbow"
   flossum reverse "Goodbye!"
   flossum progress
+  flossum flash "Flashing text"
+  flossum typeDelete "Erasing this..."
+
 
 Available Animations:
   typeOut (alias: type)
@@ -66,6 +75,8 @@ Available Animations:
   rainbow
   reverse (alias: reverseType)
   progress (alias: progressBar)
+  flash
+  typeDelete
 
 Options:
   --help, -h    Show this help message
