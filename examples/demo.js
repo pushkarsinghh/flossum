@@ -27,4 +27,6 @@ const frames = [
   await flossum.scramble("🔍 Unraveling mysteries...", { duration: 1200 });
   await flossum.spinner("⏳ Please wait while we prepare awesomeness...", 2500);
   await flossum.typeOut("🎉 All done! Enjoy coding!", 50);
+  await flossum.flash("⚠️ Warning!", {flashes: 6,interval: 150});
+  await flossum.typeDelete("👋 Watch this disappear!", { delay: 100,deleteDelay: 80,pause: 1000,repeat: false});
 })();

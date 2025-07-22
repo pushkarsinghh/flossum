@@ -14,6 +14,8 @@
 * 🌈 Rainbow text animation (`rainbow`)
 * 🎞 Frame-based ASCII animation player (`playFrames`)
 * 🅰️ ASCII art text rendering (`asciiArt`)
+* ⚡ Flashing text effect (`flash`)
+* ✂️ Type-delete effect (`typeDelete`)
 
 ## 📦 Installation
 
@@ -39,6 +41,7 @@ await flossum.colorPulse("🌈 Feel the rainbow energy!");
 await flossum.playFrames([
   '[     ]', '[=    ]', '[==   ]', '[===  ]', '[==== ]', '[=====]', '[ ====]', '[  ===]', '[   ==]', '[    =]', '[     ]',
 ], { interval: 3000, delay: 90, repeat: 3});
+
 ```
 
 
@@ -54,6 +57,8 @@ flossum scramble "Secret..."
 flossum rainbow "🌈"
 flossum spinner "Please wait..."
 flossum progressBar
+flossum flash "⚡ Flashing now!"
+flossum typeDelete "Deleting now..."
 ```
 
 ```bash
@@ -111,3 +116,5 @@ See [LICENSE](./LICENSE) for details.
 * GitHub: [github.com/pushkarsingh/flossum](https://github.com/pushkarsingh/flossum)
 * NPM: [npmjs.com/package/flossum](https://www.npmjs.com/package/flossum)
 * Website: Coming soon ✨
+
+
