@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flossum Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1e1e1e;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        #terminal {
+            width: 90%;
+            max-width: 800px;
+            height: 80vh;
+            background: #000;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        #status {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="status"></div>
+    <div id="terminal"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.js"></script>
+    <script>
+        const term = new Terminal({
+            fontFamily: 'Menlo, Monaco, Consolas, monospace',
+            fontSize: 14,
+            lineHeight: 1.2,
+            cursorBlink: true,
+            convertEol: true,
+            scrollback: 100,
+            cols: 80,
+            rows: 24
+        });
+        
+        term.open(document.getElementById('terminal'));
+
+        let ws;
+        let isConnected = false;
+        const statusEl = document.getElementById('status');
+
+        function connectWebSocket() {
+            ws = new WebSocket(`ws://${window.location.hostname}:3000`);
+
+            ws.onopen = () => {
+                isConnected = true;
+                statusEl.textContent = 'Connected';
+                term.write('Welcome to Flossum Demo!\r\nType "help" for available commands\r\n$ ');
+            };
+
+            ws.onmessage = (event) => {
+                term.write(event.data);
+            };
+
+            let inputBuffer = '';
+            term.onKey(({ key, domEvent }) => {
+                const printable = !domEvent.altKey && !domEvent.altGraphKey && !domEvent.ctrlKey && !domEvent.metaKey;
+
+                if (domEvent.keyCode === 13) { // Enter
+                    term.write('\r\n');
+                    if (inputBuffer.trim()) {
+                        ws.send(JSON.stringify({
+                            type: 'command',
+                            text: inputBuffer
+                        }));
+                    }
+                    inputBuffer = '';
+                } else if (domEvent.keyCode === 8) { // Backspace
+                    if (inputBuffer.length > 0) {
+                        inputBuffer = inputBuffer.slice(0, -1);
+                        term.write('\b \b');
+                    }
+                } else if (printable) {
+                    inputBuffer += key;
+                    term.write(key);
+                }
+            });
+
+            ws.onclose = () => {
+                isConnected = false;
+                statusEl.textContent = 'Disconnected. Reconnecting...';
+                setTimeout(connectWebSocket, 3000);
+            };
+
+            ws.onerror = () => {
+                isConnected = false;
+                statusEl.textContent = 'Connection error. Retrying...';
+            };
+        }
+
+        connectWebSocket();
+    </script>
+</body>
+</html>
