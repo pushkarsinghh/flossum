@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo": "node ./examples/demo.js"
+    "demo": "node ./examples/demo.js",
+    "web": "node demo-server.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,9 @@
   "homepage": "https://github.com/pushkarsinghh/flossum#readme",
   "dependencies": {
     "cfonts": "^3.3.0",
-    "chalk": "^5.4.1",
-    "flossum": "^1.0.5"
+    "chalk": "^5.4.1"
+  },
+  "devDependencies": {
+    "ws": "^8.13.0"
   }
 }
