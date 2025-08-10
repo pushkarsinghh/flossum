@@ -115,6 +115,6 @@ See [LICENSE](./LICENSE) for details.
 
 * GitHub: [github.com/pushkarsingh/flossum](https://github.com/pushkarsingh/flossum)
 * NPM: [npmjs.com/package/flossum](https://www.npmjs.com/package/flossum)
-* Website: Coming soon ✨
+* Website: [flossum.vercel.app](https://flossum.vercel.app)
 
 
