@@ -45,6 +45,9 @@ const text = args.slice(1).join(' ');
     case 'typeDelete':
       await flossum.typeDelete(text);
       break;
+    case 'dots':
+      await flossum.dots(text);
+      break;
     case '--help':
     case '-h':
     default:
@@ -63,6 +66,7 @@ Usage:
   flossum progress
   flossum flash "Flashing text"
   flossum typeDelete "Erasing this..."
+  flossum dots "Loading..."
 
 
 Available Animations:
@@ -77,6 +81,7 @@ Available Animations:
   progress (alias: progressBar)
   flash
   typeDelete
+  dots
 
 Options:
   --help, -h    Show this help message

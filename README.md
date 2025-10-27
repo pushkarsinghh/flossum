@@ -19,6 +19,7 @@
 * 🅰️ ASCII art text rendering (`asciiArt`)
 * ⚡ Flashing text effect (`flash`)
 * ✂️ Type-delete effect (`typeDelete`)
+* ⏳ Dots loading animation (`dots`)
 
 ## 📦 Installation
 
@@ -45,6 +46,12 @@ await flossum.playFrames([
   '[     ]', '[=    ]', '[==   ]', '[===  ]', '[==== ]', '[=====]', '[ ====]', '[  ===]', '[   ==]', '[    =]', '[     ]',
 ], { interval: 3000, delay: 90, repeat: 3});
 
+await flossum.dots("Loading", {
+  cycles: 5,
+  interval: 300,
+  char: ".",
+  maxDots: 3
+});
 ```
 
 
@@ -62,6 +69,7 @@ flossum spinner "Please wait..."
 flossum progressBar
 flossum flash "⚡ Flashing now!"
 flossum typeDelete "Deleting now..."
+flossum dots "Loading"
 ```
 
 ```bash
