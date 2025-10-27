@@ -1,1 +1,61 @@
+# Node
 node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.pid.lock
+.node_repl_history
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache
+.npm
+.cache/
+
+# Build / output
+dist/
+build/
+out/
+*.tgz
+lib-cov/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Bundler caches
+.rpt2_cache/
+.rts2_cache_*
+.cache/
+
+# Next / Nuxt / SvelteKit
+.next/
+.nuxt/
+.svelte-kit/
+
+# Parcel
+.cache/
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-*
+
+# Environment files
+.env
+.env.*.local
+
+# Misc
+.DS_Store
+Thumbs.db
