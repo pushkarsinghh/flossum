@@ -1,8 +1,11 @@
 # 🌸 Flossum
 
-> 🎬 Beautiful and minimal terminal animations for your CLI projects, scripts, and creative coding. Bring your text to life with expressive effects.
+> Beautiful and minimal terminal animations for your CLI projects, scripts, and creative coding. Bring your text to life with expressive effects.
 
-## ✨ Features
+**🎬 [Watch the Video Demo](https://www.youtube.com/watch?v=18lzkb331Gk)**
+
+
+## ✨ Available Animations
 * ⌨️ Typewriter effect (`typeOut`)
 * ⏪ Reverse typewriter effect (`reverseType`)
 * 🌊 Wavy text animation (`wave`)
