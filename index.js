@@ -11,8 +11,9 @@ import { spinner } from './lib/simple/spinner.js';
 import { asciiArt } from './lib/effects/asciiArt.js';
 import {flash} from './lib/simple/flash.js';
 import {typeDelete} from "./lib/simple/typeDelete.js";
-import { dots } from './lib/loaders/dots.js';
-const flossum = {
+import { dots } from './lib/loader/dots.js';
+
+export const flossum = {
   typeOut,
   spinner,
   reverseType,
@@ -29,5 +30,4 @@ const flossum = {
   dots
 };
 
-export { flossum };
 export default flossum;
