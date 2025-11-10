@@ -56,27 +56,7 @@ await flossum.dots("Loading", {
 
 
 ## ⚙️ CLI Usage
-
-```bash
-flossum typeOut "Hello World"
-flossum reverseType "Backwards magic"
-flossum wave "Wavy Text"
-flossum colorPulse "Pulse!"
-flossum glitch "Glitch!"
-flossum scramble "Secret..."
-flossum rainbow "🌈"
-flossum spinner "Please wait..."
-flossum progressBar
-flossum flash "⚡ Flashing now!"
-flossum typeDelete "Deleting now..."
-flossum dots "Loading"
-```
-
-```bash
-flossum --help
-```
-
-> Lists all available animations and usage instructions.
+For detailed command usage, see [COMMAND.md](COMMANDS.md)
 
 ## 🎬 Demo
 
