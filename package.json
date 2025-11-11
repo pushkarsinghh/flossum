@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo": "node ./examples/demo.js"
+    "demo": "node ./examples/demo.js",
+    "beta-demo": "node ./beta-animations/beta-test.js"
   },
   "repository": {
     "type": "git",
