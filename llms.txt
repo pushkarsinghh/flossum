@@ -1,0 +1,88 @@
+# Flossum
+
+Flossum is a modern Node.js library for creating rich text animations in the terminal. It is built as an ES Module and uses Promises for seamless `async/await` control flow.
+
+## Installation
+
+```bash
+npm install flossum
+```
+
+## Quick Start
+
+```javascript
+import flossum from 'flossum';
+
+(async () => {
+  await flossum.typeOut("Hello World!");
+  await flossum.spinner("Loading...", 2000);
+})();
+```
+
+## API Reference
+
+### Text Typing & Transition
+*   `typeOut(text: string, speed?: number): Promise<void>`
+    Types out the text character by character.
+    *   `speed`: Delay between chars in ms (default: 50).
+
+*   `reverseType(text: string, speed?: number): Promise<void>`
+    Reveals text starting from the end of the string.
+    *   `speed`: Delay between chars in ms (default: 50).
+
+*   `typeDelete(text: string, options?): Promise<void>`
+    Types the text, waits, and then deletes it character by character.
+    *   `options`: `{ delay: number, deleteDelay: number, pause: number, repeat: boolean }`
+
+### Loaders & Status
+*   `spinner(text?: string, duration?: number): Promise<void>`
+    Displays a rotating line spinner `| / - \` next to the text.
+    *   `duration`: Total run time in ms (default: 2000).
+
+*   `progressBar(options?): Promise<void>`
+    Displays a filling progress bar `[████------] 40%`.
+    *   `options`: `{ width: number (def: 30), duration: number (def: 2000), char: string (def: '█') }`
+
+*   `dots(text?: string, options?): Promise<void>`
+    Displays a loading state with cycling dots (e.g., "Loading...").
+    *   `options`: `{ cycles: number, interval: number, char: string, maxDots: number }`
+
+### Visual Effects
+*   `rainbow(text: string, options?): Promise<void>`
+    Cycles the text colors through the spectrum.
+    *   `options`: `{ duration: number }`
+
+*   `wave(text: string, options?): Promise<void>`
+    Applies a wave-like motion to the text characters.
+    *   `options`: `{ duration: number }`
+
+*   `glitch(text: string, options?): Promise<void>`
+    Simulates a digital glitch effect by randomly replacing characters.
+    *   `options`: `{ duration: number, steps: number }`
+
+*   `scramble(text: string, options?): Promise<void>`
+    Starts with random characters and progressively reveals the actual text.
+    *   `options`: `{ duration: number }`
+
+*   `flash(text: string, options?): Promise<void>`
+    Flashes the text on and off.
+    *   `options`: `{ flashes: number, interval: number }`
+
+*   `asciiArt(text: string, options?): Promise<string>`
+    Generates a large ASCII art representation of the text.
+    *   `options`: Passed to `cfonts` (e.g., `{ font: 'block', colors: ['red', 'blue'] }`).
+    *   **Note:** Returns a string, does not print automatically.
+
+## Development Tools
+
+**Flossum DevTools** is the official VS Code extension to speed up your workflow.
+
+*   **Marketplace:** [Download Flossum DevTools](https://marketplace.visualstudio.com/items?itemName=pushkarscripts.flossum-devtools)
+*   **Features:**
+    *   **Snippets:** Type `f` followed by the animation name (e.g., `ftype` → `await flossum.typeOut(...)`, `fspin`, `fprogress`) to instantly generate boilerplate code.
+    *   **IntelliSense:** Full autocomplete support for all Flossum functions.
+    *   **Hover Docs:** View parameter details and descriptions directly in the editor.
+
+## Best Practices
+1.  **Always Await:** Animations rely on `setTimeout`. If you don't `await` them, they will run overlapping each other, causing visual artifacts.
+2.  **Clean Output:** Functions like `spinner` and `progressBar` handle their own carriage returns (`\r`). Ensure you don't manually log conflicting text during their execution.

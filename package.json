@@ -1,6 +1,6 @@
 {
   "name": "flossum",
-  "version": "1.0.8",
+  "version": "1.1.2",
   "description": "TextFX for the terminal.",
   "main": "index.js",
   "type": "module",
@@ -8,25 +8,27 @@
     "flossum": "./bin/flossum.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
     "demo": "node ./examples/demo.js",
     "beta-demo": "node ./beta-animations/beta-test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pushkarsinghh/flossum.git"
+    "url": "git+https://github.com/pushkarscripts/flossum.git"
   },
   "types": "index.d.ts",
   "author": "Pushkar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pushkarsinghh/flossum/issues"
+    "url": "https://github.com/pushkarscripts/flossum/issues"
   },
-  "homepage": "https://github.com/pushkarsinghh/flossum#readme",
+  "homepage": "https://github.com/pushkarscripts/flossum#readme",
   "dependencies": {
     "cfonts": "^3.3.0",
     "chalk": "^5.4.1",
-    "commander": "^14.0.2",
-    "flossum": "^1.0.5"
+    "commander": "^14.0.2"
+  },
+  "devDependencies": {
+    "vitest": "^4.0.18"
   }
 }

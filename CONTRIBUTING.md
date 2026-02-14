@@ -6,7 +6,7 @@ Thank you for your interest in contributing! Please follow these guidelines to h
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/pushkarsinghh/flossum.git
+   git clone https://github.com/pushkarscripts/flossum.git
    cd flossum
    ```
 
